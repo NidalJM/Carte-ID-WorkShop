@@ -1,0 +1,59 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const personnes = [
+        { nom: "Aziz", prenom: "Bennani", date: "1999-02-14", nationalite: "Marocaine", adresse: "Casablanca" },
+        { nom: "Aymen", prenom: "Jaziri", date: "1998-05-21", nationalite: "Tunisienne", adresse: "Sfax" },
+        { nom: "Sara", prenom: "Haddad", date: "2000-07-11", nationalite: "Algérienne", adresse: "Oran" },
+        { nom: "Youssef", prenom: "Elmehdi", date: "1997-12-01", nationalite: "Marocaine", adresse: "Marrakech" },
+        { nom: "Leila", prenom: "Belli", date: "2001-04-09", nationalite: "Algérienne", adresse: "Alger" },
+        { nom: "Houssam", prenom: "Safi", date: "1996-09-22", nationalite: "Marocaine", adresse: "Safi" },
+        { nom: "Inès", prenom: "Khalil", date: "1999-08-15", nationalite: "Tunisienne", adresse: "Tunis" },
+        { nom: "Omar", prenom: "Ziani", date: "1995-03-02", nationalite: "Marocaine", adresse: "Rabat" },
+        { nom: "Ali", prenom: "Benali", date: "2002-06-29", nationalite: "Française", adresse: "Paris" },
+    ];
+
+    const container = document.getElementById("cards-container");
+    const modal = document.getElementById("modal");
+    const modalBody = document.getElementById("modal-body");
+    const closeBtn = document.querySelector(".close-btn");
+
+    personnes.forEach(p => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+        <div class="card-info">
+          <h3>${p.nom} ${p.prenom}</h3>
+        </div>
+      `;
+        card.addEventListener("click", () => {
+            modalBody.innerHTML = `
+          <h3>${p.nom} ${p.prenom}</h3>
+          <p><b>Date de naissance :</b> ${p.date}</p>
+          <p><b>Nationalité :</b> ${p.nationalite}</p>
+          <p><b>Adresse :</b> ${p.adresse}</p>
+        `;
+            modal.style.display = "block";
+        });
+        container.appendChild(card);
+    });
+
+    closeBtn.addEventListener("click", () => { modal.style.display = "none"; });
+    window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
+
+    // function showAllNames() {
+    //     personnes.forEach(e => {
+    //         console.log(`${e.nom} ${e.prenom}`);
+
+    //     })
+    // }
+
+    function showAllNames() {
+        const names = personnes.map(e => `${e.nom} ${e.prenom}`)
+        console.log(names);
+        }
+    
+    showAllNames()
+
+
+        
+});
+

@@ -150,6 +150,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // countMoroccan()
 
+    //Function 4
+
+    const btn = document.createElement('button');
+    btn.textContent = "Delete";
+    btn.style.margin = "5rem"
+    btn.style.padding = "15px"
+    btn.style.borderRadius = "12px"
+    document.body.append(btn)
+
+
+    //---------------------------------------------------------------------------------------
+    //Method 1
+
+    // function removeTunisians() {
+    //     const tunisienne = personnes.filter(e => !(e.nationalite === "Tunisienne" && e.nom === "Inès"));
+    //     container.innerHTML = "";
+    //     tunisienne.forEach(p => {
+    //         const card = document.createElement("div");
+    //         card.className = "card";
+    //         card.innerHTML = `
+    //     <div class="card-info">
+    //       <h3>${p.nom} ${p.prenom}</h3>
+    //     </div>
+    //   `;
+    //         card.addEventListener("click", () => {
+    //             modalBody.innerHTML = `
+    //       <h3>${p.nom} ${p.prenom}</h3>
+    //       <p><b>Date de naissance :</b> ${p.date}</p>
+    //       <p><b>Nationalité :</b> ${p.nationalite}</p>
+    //       <p><b>Adresse :</b> ${p.adresse}</p>
+    //     `;
+    //             modal.style.display = "block";
+    //         });
+    //         container.appendChild(card);
+    //     });
+    // }
+
+    //Method 2
+
+    // function removeTunisians()  {
+    //     const cards = container.querySelectorAll('.card');
+    //     cards.forEach(e => {
+    //         if (e.textContent.includes("Inès")) {
+    //             e.remove();
+    //         }
+    //     })
+    // }
+
+    
+    btn.addEventListener('click', () => removeTunisians())
 
 });
 

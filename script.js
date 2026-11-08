@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Method 1
 
     // function removeTunisians() {
-    //     const tunisienne = personnes.filter(e => !(e.nationalite === "Tunisienne" && e.nom === "Inès"));
+    //     const tunisienne = personnes.filter(e => !(e.nationalite === "Tunisienne"));
     //     container.innerHTML = "";
     //     tunisienne.forEach(p => {
     //         const card = document.createElement("div");
@@ -191,15 +191,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // function removeTunisians()  {
     //     const cards = container.querySelectorAll('.card');
-    //     cards.forEach(e => {
-    //         if (e.textContent.includes("Inès")) {
-    //             e.remove();
+    //     cards.forEach(card => {
+    //         const isTunisian = personnes.some(e => e.nationalite === "Tunisienne" && card.textContent.includes(e.nom))
+    //         if (isTunisian) {
+    //             card.remove()
     //         }
     //     })
     // }
 
-    
+
     btn.addEventListener('click', () => removeTunisians())
 
+    //Function 5
+    //---------------------------------------------------------------------------------------
+    const btnGreen = document.createElement('button');
+    btnGreen.textContent = "Moroccan Green";
+    btnGreen.style.margin = "5rem"
+    btnGreen.style.padding = "15px"
+    btnGreen.style.borderRadius = "12px"
+    document.body.append(btnGreen)
+
+    //Method 1
+
+    // function highlightMoroccan()    {
+    //     const cards = container.querySelectorAll('.card');
+
+    //     cards.forEach(card => {
+    //         const isMoroccan = personnes.some(e => e.nationalite === "Marocaine" && card.textContent.includes(e.nom))
+    //         if (isMoroccan) {
+    //             card.style.backgroundColor = "lightgreen"
+    //         }
+    //     })
+
+    // }
+
+    btnGreen.addEventListener('click', () => highlightMoroccan())
 });
 

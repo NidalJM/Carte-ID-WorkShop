@@ -43,9 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
     //Functions
 
     //Function 1
-//---------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------
 
-            //Method 1
+    //Method 1
     // function showAllNames() {
     //     personnes.forEach(e => {
     //         console.log(`${e.nom} ${e.prenom}`);
@@ -54,52 +54,101 @@ document.addEventListener('DOMContentLoaded', () => {
     // }
 
 
-            //Method 2
+    //Method 2
     // function showAllNames() {
     //     const names = personnes.map(e => `${e.nom} ${e.prenom}`)
     //     console.log(names);
     //     }
-    
+
     // showAllNames()
 
 
     //Function 2
-//---------------------------------------------------------------------------------------
-            //Method 1
-        // function showUniqueNationalities()  {
-        //     const natio = [];
-        //     personnes.forEach(e => {
-        //         if (!natio.includes(e.nationalite))
-        //         natio.push(e.nationalite)
-        //     })
-        //     console.log(natio);
-            
-        // }
-        // showUniqueNationalities()
+    //---------------------------------------------------------------------------------------
+    //Method 1
+    // function showUniqueNationalities()  {
+    //     const natio = [];
+    //     personnes.forEach(e => {
+    //         if (!natio.includes(e.nationalite))
+    //         natio.push(e.nationalite)
+    //     })
+    //     console.log(natio);
+
+    // }
+    // showUniqueNationalities()
 
 
-            //Method 2
+    //Method 2
     // function showUniqueNationalities()  {
     //     const uniqueNatio = [... new Set(personnes.map(e => e.nationalite))];
     //     console.log(`Les nationalite sont: ${uniqueNatio.join(' ')}`);
-        
+
     // }
 
     // showUniqueNationalities()
 
 
-            //Method 3
+    //Method 3
     // function showUniqueNationalities()  {
     //     const nationalite = personnes.map(e => e.nationalite);
     //     const uniqueNatio = nationalite.filter((item, index) => nationalite.indexOf(item) === index)
     //     console.log(uniqueNatio);
-        
+
     // }
     // showUniqueNationalities()
 
 
+    //Function 3
+    //---------------------------------------------------------------------------------------
+    //Method 1
+
+    // function countMoroccan()    {            
+    //     let count = 0
+    //     for (let i = 0; i < personnes.length; i++) {
+    //        if (personnes[i].nationalite === "Marocaine")    {
+    //         count ++
+    //        }
+    //     }
+    //     return console.log(count);
+    // }
+
+    // countMoroccan()
+
+    //Method 2
+
+    //     function countMoroccan()    {
+    //     let count = 0
+    //     for (const e of personnes) {
+    //        if (e.nationalite === "Marocaine")    {
+    //         count ++
+    //        }
+    //     }
+    //     return console.log(count);
+    // }
 
 
+    // countMoroccan()
+
+    //Method 3
+
+    // function countMoroccan() {
+    //     const moroccanCount = personnes.reduce((count, p) => {
+    //         return p.nationalite === "Marocaine" ? count + 1 : count;
+    //     }, 0);
+
+    //     console.log(`Number of Moroccan people: ${moroccanCount}`);
+    // }
+    // countMoroccan();
+
+    //Method 4
+
+    // function countMoroccan()    {
+    //     const moroccanCount = personnes.filter(e => e.nationalite === "Marocaine").length;
+    //     console.log(moroccanCount);
+
+    // }
+
+    // countMoroccan()
 
 
 });

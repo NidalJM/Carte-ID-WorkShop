@@ -39,6 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
     closeBtn.addEventListener("click", () => { modal.style.display = "none"; });
     window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
 
+
+    //Functions
+
+    //Function 1
+//---------------------------------------------------------------------------------------
+
+            //Method 1
     // function showAllNames() {
     //     personnes.forEach(e => {
     //         console.log(`${e.nom} ${e.prenom}`);
@@ -46,14 +53,54 @@ document.addEventListener('DOMContentLoaded', () => {
     //     })
     // }
 
-    function showAllNames() {
-        const names = personnes.map(e => `${e.nom} ${e.prenom}`)
-        console.log(names);
-        }
+
+            //Method 2
+    // function showAllNames() {
+    //     const names = personnes.map(e => `${e.nom} ${e.prenom}`)
+    //     console.log(names);
+    //     }
     
-    showAllNames()
+    // showAllNames()
 
 
+    //Function 2
+//---------------------------------------------------------------------------------------
+            //Method 1
+        // function showUniqueNationalities()  {
+        //     const natio = [];
+        //     personnes.forEach(e => {
+        //         if (!natio.includes(e.nationalite))
+        //         natio.push(e.nationalite)
+        //     })
+        //     console.log(natio);
+            
+        // }
+        // showUniqueNationalities()
+
+
+            //Method 2
+    // function showUniqueNationalities()  {
+    //     const uniqueNatio = [... new Set(personnes.map(e => e.nationalite))];
+    //     console.log(`Les nationalite sont: ${uniqueNatio.join(' ')}`);
         
+    // }
+
+    // showUniqueNationalities()
+
+
+            //Method 3
+    // function showUniqueNationalities()  {
+    //     const nationalite = personnes.map(e => e.nationalite);
+    //     const uniqueNatio = nationalite.filter((item, index) => nationalite.indexOf(item) === index)
+    //     console.log(uniqueNatio);
+        
+    // }
+    // showUniqueNationalities()
+
+
+
+
+
+
 });
 

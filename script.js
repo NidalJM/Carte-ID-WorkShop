@@ -238,39 +238,70 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Method 1
 
-//     function sortByName() {
-//         const sortedNames = [...personnes].sort((a, b) => a.nom.localeCompare(b.nom));
-//         console.log(sortedNames.map(e => `${e.nom} ${e.prenom}`));
+    //     function sortByName() {
+    //         const sortedNames = [...personnes].sort((a, b) => a.nom.localeCompare(b.nom));
+    //         console.log(sortedNames.map(e => `${e.nom} ${e.prenom}`));
 
-//         container.innerHTML = ''
-//         sortedNames.forEach(p => {
-//             const card = document.createElement("div");
-//             card.className = "card";
-//             card.innerHTML = `
-//         <div class="card-info">
-//           <h3>${p.nom} ${p.prenom}</h3>
-//         </div>
-//       `;
-//             card.addEventListener("click", () => {
-//                 modalBody.innerHTML = `
-//           <h3>${p.nom} ${p.prenom}</h3>
-//           <p><b>Date de naissance :</b> ${p.date}</p>
-//           <p><b>Nationalité :</b> ${p.nationalite}</p>
-//           <p><b>Adresse :</b> ${p.adresse}</p>
-//         `;
-//                 modal.style.display = "block";
-//             });
-//             container.appendChild(card);
-//         });
+    //         container.innerHTML = ''
+    //         sortedNames.forEach(p => {
+    //             const card = document.createElement("div");
+    //             card.className = "card";
+    //             card.innerHTML = `
+    //         <div class="card-info">
+    //           <h3>${p.nom} ${p.prenom}</h3>
+    //         </div>
+    //       `;
+    //             card.addEventListener("click", () => {
+    //                 modalBody.innerHTML = `
+    //           <h3>${p.nom} ${p.prenom}</h3>
+    //           <p><b>Date de naissance :</b> ${p.date}</p>
+    //           <p><b>Nationalité :</b> ${p.nationalite}</p>
+    //           <p><b>Adresse :</b> ${p.adresse}</p>
+    //         `;
+    //                 modal.style.display = "block";
+    //             });
+    //             container.appendChild(card);
+    //         });
 
-//     }
+    //     }
 
-// btnSort.addEventListener('click', () => sortByName())
+    // btnSort.addEventListener('click', () => sortByName())
 
     //Function 7
     //---------------------------------------------------------------------------------------
+    const btnFilter = document.createElement('button');
+    btnFilter.textContent = "Fiter Moroccan";
+    btnFilter.style.margin = "5rem"
+    btnFilter.style.padding = "15px"
+    btnFilter.style.borderRadius = "12px"
+    document.body.append(btnFilter)
 
     //Method 1
+    // function filterMoroccan() {
+    //     const isMoroccan = [...personnes].filter(e => e.nationalite === "Marocaine")
+    //     container.innerHTML = ''
+    //     isMoroccan.forEach(p => {
+    //         const card = document.createElement("div");
+    //         card.className = "card";
+    //         card.innerHTML = `
+    //     <div class="card-info">
+    //       <h3>${p.nom} ${p.prenom}</h3>
+    //     </div>
+    //   `;
+    //         card.addEventListener("click", () => {
+    //             modalBody.innerHTML = `
+    //       <h3>${p.nom} ${p.prenom}</h3>
+    //       <p><b>Date de naissance :</b> ${p.date}</p>
+    //       <p><b>Nationalité :</b> ${p.nationalite}</p>
+    //       <p><b>Adresse :</b> ${p.adresse}</p>
+    //     `;
+    //             modal.style.display = "block";
+    //         });
+    //         container.appendChild(card);
+    //     });
 
+    // }
+btnFilter.addEventListener('click', () => filterMoroccan())
+    
 });
 

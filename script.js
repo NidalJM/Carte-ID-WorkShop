@@ -301,10 +301,12 @@ document.addEventListener('DOMContentLoaded', () => {
     //     });
 
     // }
-btnFilter.addEventListener('click', () => filterMoroccan())
-    
+    btnFilter.addEventListener('click', () => filterMoroccan())
+
     //Function 8
     //---------------------------------------------------------------------------------------
+
+    // Method 1
 
     // function showNamesStartingWithA()   {
     //     const letter =  "a"
@@ -312,13 +314,36 @@ btnFilter.addEventListener('click', () => filterMoroccan())
     //     console.log(startA);
     // }
 
+    //Method 2
+
     // function showNamesStartingWithA()   {
     //     const letter = "a"
     //     const startA = personnes.filter(e => e.nom[0].toLowerCase() === letter)
     //     console.log(startA);
-        
+
     // }
 
     // showNamesStartingWithA()
+
+
+    //Function 9
+    //---------------------------------------------------------------------------------------
+
+    const searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.placeholder = 'Search cards...';
+    searchInput.style.margin = '1rem';
+    searchInput.style.padding = '10px';
+    searchInput.style.borderRadius = '8px';
+    searchInput.style.border = '1px solid #ccc';
+    document.body.prepend(searchInput);
+
+    // function searchCards()  {
+    //     const query =   searchInput.value.toLowerCase().trim();
+    //     const matches = personnes.filter(e =>   e.nom.toLowerCase().startsWith(query) || e.prenom.toLowerCase().startsWith(query));
+    //     console.log(matches);
+    // }
+
+    searchInput.addEventListener('input', searchCards)
 });
 

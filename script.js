@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnFilter.style.borderRadius = "12px"
     document.body.append(btnFilter)
 
-    //Method 1
+    // Method 1
     // function filterMoroccan() {
     //     const isMoroccan = [...personnes].filter(e => e.nationalite === "Marocaine")
     //     container.innerHTML = ''
@@ -344,6 +344,26 @@ document.addEventListener('DOMContentLoaded', () => {
     //     console.log(matches);
     // }
 
-    searchInput.addEventListener('input', searchCards)
+    // searchInput.addEventListener('input', searchCards)
+
+    //Function 10
+    //---------------------------------------------------------------------------------------
+
+    const btnCount = document.createElement('button');
+    btnCount.textContent = 'Count Visible Cards';
+    btnCount.style.padding = '10px';
+    btnCount.style.borderRadius = '8px';
+    btnCount.style.border = '1px solid #ccc';
+    document.body.append(btnCount)
+
+    // function countVisibleCards()    {
+    //     // const cards = container.querySelectorAll('.card')
+    //     console.log('Visible cards: '+container.querySelectorAll('.card').length);
+
+    // }
+
+    // btnCount.addEventListener('click', () => countVisibleCards())
+
+    
 });
 

@@ -303,5 +303,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // }
 btnFilter.addEventListener('click', () => filterMoroccan())
     
+    //Function 8
+    //---------------------------------------------------------------------------------------
+
+    // function showNamesStartingWithA()   {
+    //     const letter =  "a"
+    //     const startA = personnes.filter(e => e.nom.toLowerCase().startsWith(letter));
+    //     console.log(startA);
+    // }
+
+    // function showNamesStartingWithA()   {
+    //     const letter = "a"
+    //     const startA = personnes.filter(e => e.nom[0].toLowerCase() === letter)
+    //     console.log(startA);
+        
+    // }
+
+    // showNamesStartingWithA()
 });
 

@@ -429,6 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Function 12
     //---------------------------------------------------------------------------------------
+
     const btnReset = document.createElement('button');
     btnReset.textContent = 'Reset Cards';
     btnReset.style.padding='10px';
@@ -462,5 +463,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // btnReset.addEventListener('click', () => resetCards())
     
+    //Function 13
+    //---------------------------------------------------------------------------------------
+    
+    // function averageCards() {
+    //     const currentYear = 2026
+    //     const totalAge = personnes.reduce((sum, p) => {
+    //         const year = parseInt(p.date.split("-")[0]);
+    //         return sum + (currentYear - year)
+    //     }, 0);
+
+    //     const average = totalAge / personnes.length;
+    //     console.log(average.toFixed(1));
+        
+    // }
+
+    // averageCards()
 });
 

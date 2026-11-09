@@ -344,27 +344,27 @@ document.addEventListener('DOMContentLoaded', () => {
     //     console.log(matches);
 
 
-//     container.innerHTML = ''
-//     matches.forEach(p => {
-//         const card = document.createElement("div");
-//         card.className = "card";
-//         card.innerHTML = `
-//         <div class="card-info">
-//           <h3>${p.nom} ${p.prenom}</h3>
-//         </div>
-//       `;
-//         card.addEventListener("click", () => {
-//             modalBody.innerHTML = `
-//           <h3>${p.nom} ${p.prenom}</h3>
-//           <p><b>Date de naissance :</b> ${p.date}</p>
-//           <p><b>Nationalité :</b> ${p.nationalite}</p>
-//           <p><b>Adresse :</b> ${p.adresse}</p>
-//         `;
-//             modal.style.display = "block";
-//         });
-//         container.appendChild(card);
-//     });
-// }
+    //     container.innerHTML = ''
+    //     matches.forEach(p => {
+    //         const card = document.createElement("div");
+    //         card.className = "card";
+    //         card.innerHTML = `
+    //         <div class="card-info">
+    //           <h3>${p.nom} ${p.prenom}</h3>
+    //         </div>
+    //       `;
+    //         card.addEventListener("click", () => {
+    //             modalBody.innerHTML = `
+    //           <h3>${p.nom} ${p.prenom}</h3>
+    //           <p><b>Date de naissance :</b> ${p.date}</p>
+    //           <p><b>Nationalité :</b> ${p.nationalite}</p>
+    //           <p><b>Adresse :</b> ${p.adresse}</p>
+    //         `;
+    //             modal.style.display = "block";
+    //         });
+    //         container.appendChild(card);
+    //     });
+    // }
 
     // searchInput.addEventListener('input', searchCards)
 
@@ -372,32 +372,32 @@ document.addEventListener('DOMContentLoaded', () => {
     //---------------------------------------------------------------------------------------
 
     const btnCount = document.createElement('button');
-btnCount.textContent = 'Count Visible Cards';
-btnCount.style.padding = '10px';
-btnCount.style.margin = '1rem';
-btnCount.style.borderRadius = '8px';
-btnCount.style.border = '1px solid #ccc';
-document.body.append(btnCount)
+    btnCount.textContent = 'Count Visible Cards';
+    btnCount.style.padding = '10px';
+    btnCount.style.margin = '1rem';
+    btnCount.style.borderRadius = '8px';
+    btnCount.style.border = '1px solid #ccc';
+    document.body.append(btnCount)
 
-// function countVisibleCards()    {
-//     // const cards = container.querySelectorAll('.card')
-//     console.log('Visible cards: '+container.querySelectorAll('.card').length);
+    // function countVisibleCards()    {
+    //     // const cards = container.querySelectorAll('.card')
+    //     console.log('Visible cards: '+container.querySelectorAll('.card').length);
 
-// }
+    // }
 
-// btnCount.addEventListener('click', () => countVisibleCards())
+    // btnCount.addEventListener('click', () => countVisibleCards())
 
 
-//Function 11
-//---------------------------------------------------------------------------------------
+    //Function 11
+    //---------------------------------------------------------------------------------------
 
-const btnRandom = document.createElement('button');
-btnRandom.textContent = 'Randomize Cards';
-btnRandom.style.padding = '10px';
-btnRandom.style.margin = '1rem'
-btnRandom.style.borderRadius = '8px';
-btnRandom.style.border = `1px solid #ccc`;
-document.body.append(btnRandom);
+    const btnRandom = document.createElement('button');
+    btnRandom.textContent = 'Randomize Cards';
+    btnRandom.style.padding = '10px';
+    btnRandom.style.margin = '1rem'
+    btnRandom.style.borderRadius = '8px';
+    btnRandom.style.border = `1px solid #ccc`;
+    document.body.append(btnRandom);
 
     // function randomizeCards() {
     //     const shuffled = [...personnes].sort(() => Math.random() - 0.5);
@@ -426,5 +426,41 @@ document.body.append(btnRandom);
     // }
 
     // btnRandom.addEventListener('click', () => randomizeCards())
+
+    //Function 12
+    //---------------------------------------------------------------------------------------
+    const btnReset = document.createElement('button');
+    btnReset.textContent = 'Reset Cards';
+    btnReset.style.padding='10px';
+    btnReset.style.margin='1rem';
+    btnReset.style.borderRadius='8px';
+    btnReset.style.border='1px solid #ccc';
+    document.body.append(btnReset);
+
+    // function resetCards() {
+    //     container.innerHTML = ''
+    //     personnes.forEach(p => {
+    //         const card = document.createElement("div");
+    //         card.className = "card";
+    //         card.innerHTML = `
+    //     <div class="card-info">
+    //       <h3>${p.nom} ${p.prenom}</h3>
+    //     </div>
+    //   `;
+    //         card.addEventListener("click", () => {
+    //             modalBody.innerHTML = `
+    //       <h3>${p.nom} ${p.prenom}</h3>
+    //       <p><b>Date de naissance :</b> ${p.date}</p>
+    //       <p><b>Nationalité :</b> ${p.nationalite}</p>
+    //       <p><b>Adresse :</b> ${p.adresse}</p>
+    //     `;
+    //             modal.style.display = "block";
+    //         });
+    //         container.appendChild(card);
+    //     });
+    // }
+
+    // btnReset.addEventListener('click', () => resetCards())
+    
 });
 

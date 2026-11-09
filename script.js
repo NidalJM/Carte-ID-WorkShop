@@ -342,7 +342,29 @@ document.addEventListener('DOMContentLoaded', () => {
     //     const query =   searchInput.value.toLowerCase().trim();
     //     const matches = personnes.filter(e =>   e.nom.toLowerCase().startsWith(query) || e.prenom.toLowerCase().startsWith(query));
     //     console.log(matches);
-    // }
+
+
+//     container.innerHTML = ''
+//     matches.forEach(p => {
+//         const card = document.createElement("div");
+//         card.className = "card";
+//         card.innerHTML = `
+//         <div class="card-info">
+//           <h3>${p.nom} ${p.prenom}</h3>
+//         </div>
+//       `;
+//         card.addEventListener("click", () => {
+//             modalBody.innerHTML = `
+//           <h3>${p.nom} ${p.prenom}</h3>
+//           <p><b>Date de naissance :</b> ${p.date}</p>
+//           <p><b>Nationalité :</b> ${p.nationalite}</p>
+//           <p><b>Adresse :</b> ${p.adresse}</p>
+//         `;
+//             modal.style.display = "block";
+//         });
+//         container.appendChild(card);
+//     });
+// }
 
     // searchInput.addEventListener('input', searchCards)
 
@@ -350,20 +372,59 @@ document.addEventListener('DOMContentLoaded', () => {
     //---------------------------------------------------------------------------------------
 
     const btnCount = document.createElement('button');
-    btnCount.textContent = 'Count Visible Cards';
-    btnCount.style.padding = '10px';
-    btnCount.style.borderRadius = '8px';
-    btnCount.style.border = '1px solid #ccc';
-    document.body.append(btnCount)
+btnCount.textContent = 'Count Visible Cards';
+btnCount.style.padding = '10px';
+btnCount.style.margin = '1rem';
+btnCount.style.borderRadius = '8px';
+btnCount.style.border = '1px solid #ccc';
+document.body.append(btnCount)
 
-    // function countVisibleCards()    {
-    //     // const cards = container.querySelectorAll('.card')
-    //     console.log('Visible cards: '+container.querySelectorAll('.card').length);
+// function countVisibleCards()    {
+//     // const cards = container.querySelectorAll('.card')
+//     console.log('Visible cards: '+container.querySelectorAll('.card').length);
+
+// }
+
+// btnCount.addEventListener('click', () => countVisibleCards())
+
+
+//Function 11
+//---------------------------------------------------------------------------------------
+
+const btnRandom = document.createElement('button');
+btnRandom.textContent = 'Randomize Cards';
+btnRandom.style.padding = '10px';
+btnRandom.style.margin = '1rem'
+btnRandom.style.borderRadius = '8px';
+btnRandom.style.border = `1px solid #ccc`;
+document.body.append(btnRandom);
+
+    // function randomizeCards() {
+    //     const shuffled = [...personnes].sort(() => Math.random() - 0.5);
+    //     console.log("Randomized order:", shuffled.map(p => `${p.nom} ${p.prenom}`));
+    //     container.innerHTML = ''
+    //     shuffled.forEach(p => {
+    //         const card = document.createElement("div");
+    //         card.className = "card";
+    //         card.innerHTML = `
+    //     <div class="card-info">
+    //       <h3>${p.nom} ${p.prenom}</h3>
+    //     </div>
+    //   `;
+    //         card.addEventListener("click", () => {
+    //             modalBody.innerHTML = `
+    //       <h3>${p.nom} ${p.prenom}</h3>
+    //       <p><b>Date de naissance :</b> ${p.date}</p>
+    //       <p><b>Nationalité :</b> ${p.nationalite}</p>
+    //       <p><b>Adresse :</b> ${p.adresse}</p>
+    //     `;
+    //             modal.style.display = "block";
+    //         });
+    //         container.appendChild(card);
+    //     });
 
     // }
 
-    // btnCount.addEventListener('click', () => countVisibleCards())
-
-    
+    // btnRandom.addEventListener('click', () => randomizeCards())
 });
 
